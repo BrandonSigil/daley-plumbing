@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth scrolling with scroll-snap */
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Section scroll offset for fixed header */
+section {
+  scroll-margin-top: 80px;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f3f0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e3a5f;
+  border: 2px solid #f5f3f0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;
+}
+
+/* Base typography */
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bebas Neue', system-ui, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+/* Remove default button styles */
+button {
+  border-radius: 0;
+}
+
+/* Enhance focus states for accessibility */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #1e3a5f;
+  outline-offset: 3px;
+}
+
+/* Selection color */
+::selection {
+  background-color: #1e3a5f;
+  color: #ffffff;
+}
+
+/* Subtle texture overlay for old-school feel */
+.texture-overlay {
+  position: relative;
+}
+
+.texture-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.02) 2px,
+      rgba(0, 0, 0, 0.02) 4px
+    );
+  pointer-events: none;
+  opacity: 0.5;
+}

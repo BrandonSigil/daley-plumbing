@@ -1,0 +1,163 @@
+---
+import Layout from './Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  h1: string;
+  intro: string;
+  included: string[];
+  steps?: { title: string; text: string }[];
+  whyDaley: string;
+  cities?: string[];
+  faqs: { question: string; answer: string }[];
+}
+
+const {
+  title,
+  description,
+  h1,
+  intro,
+  included,
+  steps = [
+    { title: 'Call Us', text: 'Tell us what\'s going on. We\'ll ask a few questions and give you a straight answer — no sales pitch.' },
+    { title: 'Get an Estimate', text: 'We\'ll come take a look (if needed) and give you an honest quote. No mystery charges, no pressure.' },
+    { title: 'We Do the Work', text: 'We show up when we say we will, do the job right, and clean up after ourselves. That\'s it.' },
+  ],
+  whyDaley,
+  cities = ['Tacoma', 'Federal Way', 'Puyallup', 'Lakewood', 'Gig Harbor', 'Bonney Lake', 'Spanaway', 'University Place', 'Fife', 'Sumner', 'Auburn', 'Milton', 'Edgewood'],
+  faqs,
+} = Astro.props;
+---
+
+<Layout title={title} description={description}>
+  <Header />
+  <main>
+    <!-- Hero -->
+    <section class="pt-28 md:pt-36 pb-16 bg-primary text-white">
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="font-display text-5xl md:text-7xl mb-4">{h1}</h1>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+          <a href="tel:2538575064" class="inline-flex items-center gap-3 bg-white text-primary px-8 py-4 font-semibold hover:bg-secondary transition-all">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+            </svg>
+            Call (253) 857-5064
+          </a>
+          <a href="/contact" class="inline-block border-2 border-white/80 text-white px-8 py-4 font-semibold hover:bg-white hover:text-primary transition-all">
+            Get a Free Estimate
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="py-20 bg-secondary">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto">
+          <p class="text-xl text-neutral-800 leading-relaxed">{intro}</p>
+          <slot name="after-intro" />
+        </div>
+      </div>
+    </section>
+
+    <!-- What's Included -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto">
+          <h2 class="font-display text-4xl md:text-5xl text-primary mb-8">What's Included</h2>
+          <ul class="space-y-4">
+            {included.map(item => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-green flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span class="text-neutral-700 text-lg">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-20 bg-gradient-to-br from-secondary via-white to-tan/30">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="font-display text-4xl md:text-5xl text-primary mb-12 text-center">How It Works</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {steps.map((step, i) => (
+              <div class="text-center">
+                <div class="w-14 h-14 bg-primary text-white flex items-center justify-center font-display text-3xl mx-auto mb-4">{i + 1}</div>
+                <h3 class="font-display text-2xl text-primary mb-2">{step.title}</h3>
+                <p class="text-neutral-700">{step.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Daley -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto">
+          <h2 class="font-display text-4xl md:text-5xl text-primary mb-6">Why Daley</h2>
+          <p class="text-lg text-neutral-700 leading-relaxed">{whyDaley}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Area -->
+    <section class="py-16 bg-secondary">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="font-display text-3xl md:text-4xl text-primary mb-8">Cities We Serve</h2>
+        <div class="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
+          {cities.map(city => (
+            <span class="bg-white px-4 py-2 text-neutral-700 font-medium border border-neutral-200">{city}</span>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto">
+          <h2 class="font-display text-4xl md:text-5xl text-primary mb-12 text-center">Common Questions</h2>
+          <div class="space-y-6">
+            {faqs.map((faq, i) => (
+              <details class="bg-secondary p-6 shadow-sm border-l-4 border-primary group" open={i === 0}>
+                <summary class="font-display text-xl text-primary cursor-pointer flex items-center justify-between">
+                  {faq.question}
+                  <svg class="w-5 h-5 text-primary transform group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </summary>
+                <p class="text-neutral-700 mt-4 leading-relaxed">{faq.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-dark text-white">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="font-display text-4xl md:text-5xl mb-6">Ready to Get Started?</h2>
+        <p class="text-xl text-white/70 max-w-2xl mx-auto mb-10">No pressure. Just straight answers from a local plumber.</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="tel:2538575064" class="inline-flex items-center gap-3 bg-accent text-white px-8 py-4 font-semibold text-lg hover:bg-accent/90 transition-all">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+            </svg>
+            Call (253) 857-5064
+          </a>
+          <a href="/contact" class="inline-block border-2 border-white/80 text-white px-8 py-4 font-semibold text-lg hover:bg-white hover:text-dark transition-all">
+            Get a Free Estimate
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

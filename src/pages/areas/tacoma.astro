@@ -1,0 +1,132 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import FinalCTA from '../../components/FinalCTA.astro';
+---
+
+<Layout
+  title="Plumber in Tacoma, WA | Daley Plumbing | (253) 857-5064"
+  description="Daley Plumbing is a licensed, local plumber in Tacoma, WA. New construction, remodels, drain & sewer, water heaters, and emergency plumbing. Call (253) 857-5064."
+>
+  <Header />
+  <main>
+    <!-- Hero -->
+    <section class="pt-28 md:pt-36 pb-16 bg-primary text-white">
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="font-display text-5xl md:text-7xl mb-4">Plumber in Tacoma, WA</h1>
+        <p class="text-xl text-white/80 max-w-2xl mx-auto mb-8">
+          Local plumbers who actually know the neighborhood. Serving Tacoma and the South Sound for over a decade.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="tel:2538575064" class="inline-flex items-center gap-3 bg-white text-primary px-8 py-4 font-semibold hover:bg-secondary transition-all">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+            </svg>
+            Call (253) 857-5064
+          </a>
+          <a href="/contact" class="inline-block border-2 border-white/80 text-white px-8 py-4 font-semibold hover:bg-white hover:text-primary transition-all">
+            Get a Free Estimate
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tacoma-Specific Content -->
+    <section class="py-20 bg-secondary">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto">
+          <h2 class="font-display text-4xl md:text-5xl text-primary mb-8">Tacoma Is Home Base</h2>
+          <p class="text-lg text-neutral-700 leading-relaxed mb-6">
+            Tacoma is where Daley Plumbing started, and it's where we do the bulk of our work. We know this city — the neighborhoods, the housing stock, and the plumbing that comes with it. From the craftsman bungalows on the North End to the mid-century homes in South Tacoma, we've seen what time does to pipes in this climate.
+          </p>
+          <p class="text-lg text-neutral-700 leading-relaxed mb-6">
+            The older housing stock in neighborhoods like Proctor, Hilltop, and North End means more galvanized pipe replacements, more drain work, and more remodel plumbing as homeowners update century-old systems. We've done hundreds of these jobs. We know what's behind the walls before we open them up.
+          </p>
+          <p class="text-lg text-neutral-700 leading-relaxed">
+            And for the new builds going up in Ruston and the South Tacoma corridor — that's where our new construction expertise shines. We're already on the ground, already know the permitting office, and already have relationships with the builders working in this market.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Neighborhoods -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="font-display text-3xl md:text-4xl text-primary mb-8 text-center">Neighborhoods We Serve in Tacoma</h2>
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+            {['North End', 'Proctor', 'South Tacoma', 'Hilltop', 'Ruston', 'Stadium District', 'Lincoln District', '6th Avenue', 'Old Town', 'McKinley', 'Eastside', 'West End'].map(hood => (
+              <div class="bg-secondary p-3 text-center text-neutral-700 font-medium border border-neutral-200 text-sm">{hood}</div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services in Tacoma -->
+    <section class="py-20 bg-gradient-to-br from-secondary via-white to-tan/30">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="font-display text-4xl md:text-5xl text-primary mb-8 text-center">Plumbing Services in Tacoma</h2>
+          <p class="text-lg text-neutral-600 text-center mb-12 max-w-2xl mx-auto">
+            Whatever the job, we bring the same standard: show up on time, do it right, charge you fairly.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <a href="/services/new-construction" class="bg-white p-6 border-l-4 border-primary shadow-sm hover:shadow-md transition-shadow group">
+              <h3 class="font-display text-xl text-primary mb-2 group-hover:text-accent transition-colors">New Construction Plumbing</h3>
+              <p class="text-neutral-600 text-sm">Full-service new build plumbing from rough-in to trim. Active in the Ruston and South Tacoma markets.</p>
+            </a>
+            <a href="/services/remodel-renovation" class="bg-white p-6 border-l-4 border-primary shadow-sm hover:shadow-md transition-shadow group">
+              <h3 class="font-display text-xl text-primary mb-2 group-hover:text-accent transition-colors">Remodel & Renovation</h3>
+              <p class="text-neutral-600 text-sm">Tacoma's older homes need thoughtful remodel work. We reroute, upgrade, and modernize without cutting corners.</p>
+            </a>
+            <a href="/services/drain-sewer" class="bg-white p-6 border-l-4 border-green shadow-sm hover:shadow-md transition-shadow group">
+              <h3 class="font-display text-xl text-primary mb-2 group-hover:text-accent transition-colors">Drain & Sewer Services</h3>
+              <p class="text-neutral-600 text-sm">Older sewer lines and root intrusion are common in Tacoma. We clear, camera, and fix the problem at the source.</p>
+            </a>
+            <a href="/services/water-heater" class="bg-white p-6 border-l-4 border-green shadow-sm hover:shadow-md transition-shadow group">
+              <h3 class="font-display text-xl text-primary mb-2 group-hover:text-accent transition-colors">Water Heater Services</h3>
+              <p class="text-neutral-600 text-sm">Tank or tankless, repair or replace. Straight recommendation, fair price, same-day service when possible.</p>
+            </a>
+            <a href="/services/fixture-installation" class="bg-white p-6 border-l-4 border-accent shadow-sm hover:shadow-md transition-shadow group">
+              <h3 class="font-display text-xl text-primary mb-2 group-hover:text-accent transition-colors">Fixture Installation</h3>
+              <p class="text-neutral-600 text-sm">Sinks, faucets, toilets, showers — professionally installed with attention to detail.</p>
+            </a>
+            <a href="/services/emergency" class="bg-white p-6 border-l-4 border-accent shadow-sm hover:shadow-md transition-shadow group">
+              <h3 class="font-display text-xl text-primary mb-2 group-hover:text-accent transition-colors">Emergency Plumbing</h3>
+              <p class="text-neutral-600 text-sm">Burst pipe at 2 AM? We're local. We're fast. And we actually pick up the phone.</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Daley for Tacoma -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="font-display text-4xl md:text-5xl text-primary mb-8">Why Tacoma Chooses Daley</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+            <div>
+              <h3 class="font-display text-xl text-primary mb-2">We're Already Here</h3>
+              <p class="text-neutral-700 text-sm leading-relaxed">Tacoma is home base — not a market we're "expanding into." We live, work, and take our kids to school in this city.</p>
+            </div>
+            <div>
+              <h3 class="font-display text-xl text-primary mb-2">We Know Your Pipes</h3>
+              <p class="text-neutral-700 text-sm leading-relaxed">Galvanized, cast iron, polybutylene — we know what's in Tacoma homes because we've been in hundreds of them.</p>
+            </div>
+            <div>
+              <h3 class="font-display text-xl text-primary mb-2">Fast Response</h3>
+              <p class="text-neutral-700 text-sm leading-relaxed">No driving in from out of town. When you call, we can usually be at your door the same day — often within hours.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <FinalCTA />
+  </main>
+  <Footer />
+</Layout>
