@@ -10,7 +10,7 @@
 
 **Company:** Daley Plumbing  
 **Website:** DaleyPlumbing.com  
-**Phone:** (253) 857-5064  
+**Phone:** (224) 430-1420  
 **Service Area:** Pierce County and South King County, WA — Tacoma, Federal Way, Puyallup, Lakewood, Gig Harbor, Bonney Lake, Spanaway, University Place, Fife, Sumner, Auburn, Milton, Edgewood  
 **Primary market:** Tacoma and the surrounding "Tacoma-ish" area  
 **Founded:** By a licensed plumber with 10+ years of professional experience  
@@ -135,7 +135,7 @@ Think: a local brewery, not a home brewer. A founding philosophy baked into a re
 
 ### On-page SEO rules — apply to every page
 
-- **Title tag format:** `[Service] in [City] | Daley Plumbing | (253) 857-5064`
+- **Title tag format:** `[Service] in [City] | Daley Plumbing | (224) 430-1420`
 - **H1 format:** `[Service] in [City Name], WA` — always include geo in H1
 - **Meta description:** 150–160 chars, include primary keyword + phone number or CTA
 - **Phone number:** Clickable `tel:` link, visible above the fold on every page, especially mobile
@@ -195,8 +195,8 @@ One post per month minimum. Use long-tail keyword list above. Each post = anothe
 
 ### Homepage
 
-**Title tag:** `Plumber for the People | Daley Plumbing | Tacoma, WA | (253) 857-5064`  
-**Meta description:** `Daley Plumbing — licensed, local plumbers serving Tacoma and the South Sound. New construction, remodels, repairs, and emergency plumbing. No runaround. (253) 857-5064`
+**Title tag:** `Plumber for the People | Daley Plumbing | Tacoma, WA | (224) 430-1420`  
+**Meta description:** `Daley Plumbing — licensed, local plumbers serving Tacoma and the South Sound. New construction, remodels, repairs, and emergency plumbing. No runaround. (224) 430-1420`
 
 **Hero section:**
 
@@ -205,7 +205,7 @@ One post per month minimum. Use long-tail keyword list above. Each post = anothe
   - "10 years in the pipes. One standard: do it right."
   - "Not a chain. Not a one-man band. Just a local plumbing company that takes the work seriously."
 - Subheadline: "Daley Plumbing is a licensed, insured local company built on over a decade of professional experience in the South Sound. We show up when we say we will, do the job right, and treat every project like it has our name on it. Because it does."
-- CTA buttons: "Call (253) 857-5064" (primary) + "Get a Free Estimate" (secondary)
+- CTA buttons: "Call (224) 430-1420" (primary) + "Get a Free Estimate" (secondary)
 
 **Sections to include:**
 
@@ -246,7 +246,7 @@ One post per month minimum. Use long-tail keyword list above. Each post = anothe
 ### New Construction Plumbing (flagship service page)
 
 **Title tag:** `New Construction Plumber in Tacoma, WA | Daley Plumbing`  
-**Meta description:** `From rough-in to final trim, Daley Plumbing handles every phase of new construction plumbing in Pierce and King County. On time, on code, on budget. Call (253) 857-5064`  
+**Meta description:** `From rough-in to final trim, Daley Plumbing handles every phase of new construction plumbing in Pierce and King County. On time, on code, on budget. Call (224) 430-1420`  
 **H1:** `New Construction Plumbing in the South Sound — Built Right from Day One`
 
 **This page has two audiences: homeowners AND general contractors/builders. Address both.**
@@ -294,7 +294,7 @@ CTA: Phone + estimate form
 
 ### City page template (use for all service area pages)
 
-**Title tag:** `Plumber in [City], WA | Daley Plumbing | (253) 857-5064`  
+**Title tag:** `Plumber in [City], WA | Daley Plumbing | (224) 430-1420`  
 **H1:** `Plumber in [City], WA`
 
 Each city page needs _unique_ content — not copy-pasted with the city name swapped. Mention:
@@ -321,7 +321,7 @@ Use these CTAs. Match urgency to context.
 
 **Primary (use above the fold):**
 
-- "Call Today — (253) 857-5064"
+- "Call Today — (224) 430-1420"
 - "Get a Free Estimate"
 
 **Secondary / lower pressure:**
