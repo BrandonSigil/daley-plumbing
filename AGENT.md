@@ -12,7 +12,7 @@
 **Website:** DaleyPlumbing.com  
 **Phone:** (224) 430-1420  
 **Service Area:** Pierce County and South King County, WA — Tacoma, Federal Way, Puyallup, Lakewood, Gig Harbor, Bonney Lake, Spanaway, University Place, Fife, Sumner, Auburn, Milton, Edgewood  
-**Primary market:** Tacoma and the surrounding "Tacoma-ish" area  
+**Primary market:** Tacoma and the surrounding South Sound area  
 **Founded:** By a licensed plumber with 10+ years of professional experience  
 **License:** [Insert WA State Plumbing License #]  
 **Insured:** Yes — fully licensed and insured, always mention this
@@ -48,7 +48,7 @@ Think: a local brewery, not a home brewer. A founding philosophy baked into a re
 
 - Direct and no-nonsense, but warm
 - Dry wit — never slapstick, never corporate
-- Specific and local ("Pierce County," "South Sound," "Tacoma-ish area")
+- Specific and local ("Pierce County," "South Sound," "Tacoma & the South Sound")
 - Modest confidence: "we've seen this before" not "we're the best in the state"
 - Written by a human, not a marketing department
 
@@ -74,7 +74,7 @@ Think: a local brewery, not a home brewer. A founding philosophy baked into a re
 ### Approved brand phrases (use throughout the site)
 
 - "Plumber for the People" — the tagline, use frequently
-- "Serving the Tacoma-ish area" — use on homepage, header, GBP
+- "Serving Tacoma & the South Sound" — use on homepage, header, GBP
 - "Built on 10 years of doing it right"
 - "10 years in the pipes — and counting"
 - "Tacoma-built. South Sound proud."
