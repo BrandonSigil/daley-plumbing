@@ -30,9 +30,11 @@ const canonicalURL = canonicalPath
 const web3formsKey = import.meta.env.PUBLIC_WEB3FORMS_KEY ?? '';
 const analyticsId = import.meta.env.PUBLIC_GA4_ID ?? '';
 
-if (!web3formsKey) {
+// The layout runs once per page, so guard the notice to keep the build log readable.
+if (!web3formsKey && !(globalThis as Record<string, unknown>).__daleyFormKeyWarned) {
+  (globalThis as Record<string, unknown>).__daleyFormKeyWarned = true;
   console.warn(
-    '[daley] PUBLIC_WEB3FORMS_KEY is not set — estimate forms will tell visitors to call instead of submitting.'
+    '\n[daley] PUBLIC_WEB3FORMS_KEY is not set — every estimate form will tell visitors to call instead of submitting.\n'
   );
 }
 
