@@ -34,26 +34,5 @@ export default {
       },
     },
   },
-  plugins: [require("daisyui")],
-  daisyui: {
-    themes: [
-      {
-        daley: {
-          primary: "#3563BE",
-          secondary: "#F3EEDE",
-          accent: "#E05353",
-          neutral: "#C1B4AE",
-          "base-100": "#ffffff",
-          info: "#3563BE",
-          success: "#426A5A",
-          warning: "#E05353",
-          error: "#E05353",
-        },
-      },
-    ],
-    darkTheme: false,
-    base: true,
-    styled: true,
-    utils: true,
-  },
+  plugins: [],
 };

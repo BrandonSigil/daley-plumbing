@@ -29,11 +29,16 @@ const {
   services,
   responseNote = `We're based in the South Sound, which means fast response times to ${city}. When you call, you get a real plumber — not an answering service.`,
 } = Astro.props;
+
+const breadcrumbs = [
+  { name: 'Service Areas', path: '/areas' },
+  { name: city, path: Astro.url.pathname },
+];
 ---
 
-<Layout title={title} description={description}>
+<Layout title={title} description={description} breadcrumbs={breadcrumbs}>
   <Header />
-  <main>
+  <main id="main">
     <!-- Hero -->
     <section class="pt-28 md:pt-36 pb-16 bg-primary text-white">
       <div class="container mx-auto px-4 text-center">

@@ -1,6 +1,6 @@
 # CLAUDE.md — Daley Plumbing Website Agent Context
 
-> Drop this file in the root of the DaleyPlumbing.com website directory.
+> Drop this file in the root of the PlumbingDaley.com website directory.
 > Any AI coding assistant (Claude Code, Cursor, Copilot, etc.) will read this automatically
 > and use it as the brand brain for all content generation, copy, and SEO work.
 
@@ -9,7 +9,7 @@
 ## 1. Business Overview
 
 **Company:** Daley Plumbing  
-**Website:** DaleyPlumbing.com  
+**Website:** PlumbingDaley.com  
 **Phone:** (224) 430-1420  
 **Service Area:** Pierce County and South King County, WA — Tacoma, Federal Way, Puyallup, Lakewood, Gig Harbor, Bonney Lake, Spanaway, University Place, Fife, Sumner, Auburn, Milton, Edgewood  
 **Primary market:** Tacoma and the surrounding South Sound area  

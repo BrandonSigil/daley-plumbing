@@ -6,10 +6,10 @@ import Footer from '../../components/Footer.astro';
 
 <Layout
   title="New Construction Plumber in Tacoma, WA | Daley Plumbing"
-  description="From rough-in to final trim, Daley Plumbing handles every phase of new construction plumbing in Pierce and King County. On time, on code, on budget. Call (224) 430-1420"
+  description="From rough-in to final trim, Daley Plumbing handles new construction plumbing in Pierce and King County. On time, on code, on budget. Call (224) 430-1420."
 >
   <Header />
-  <main>
+  <main id="main">
     <!-- Hero -->
     <section class="pt-28 md:pt-36 pb-16 bg-primary text-white">
       <div class="container mx-auto px-4 text-center">
@@ -220,8 +220,10 @@ import Footer from '../../components/Footer.astro';
             <h2 class="font-display text-4xl md:text-5xl mb-4">Work With Us on Your Next Build</h2>
             <p class="text-white/70">Tell us about your project. No obligation.</p>
           </div>
-          <!-- Wire this form to Netlify Forms, Formspree, or your preferred handler -->
-          <form class="space-y-5" name="new-construction" method="POST">
+          <form class="space-y-5" name="new-construction" method="POST" data-web3form>
+            <input type="hidden" name="subject" value="New construction project inquiry" />
+            <input type="hidden" name="from_name" value="PlumbingDaley.com" />
+            <input type="checkbox" name="botcheck" class="form-botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" />
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div>
                 <label for="nc-name" class="block text-sm font-medium text-white/80 mb-2">Name</label>
@@ -247,7 +249,12 @@ import Footer from '../../components/Footer.astro';
                   <option value="lakewood" class="text-neutral-800">Lakewood</option>
                   <option value="gig-harbor" class="text-neutral-800">Gig Harbor</option>
                   <option value="bonney-lake" class="text-neutral-800">Bonney Lake</option>
+                  <option value="spanaway" class="text-neutral-800">Spanaway</option>
+                  <option value="university-place" class="text-neutral-800">University Place</option>
+                  <option value="fife" class="text-neutral-800">Fife</option>
                   <option value="sumner" class="text-neutral-800">Sumner</option>
+                  <option value="auburn" class="text-neutral-800">Auburn</option>
+                  <option value="milton-edgewood" class="text-neutral-800">Milton / Edgewood</option>
                   <option value="other" class="text-neutral-800">Other</option>
                 </select>
               </div>
@@ -279,7 +286,8 @@ import Footer from '../../components/Footer.astro';
               <label for="nc-details" class="block text-sm font-medium text-white/80 mb-2">Project Details</label>
               <textarea id="nc-details" name="details" rows="4" class="w-full px-4 py-3 bg-white/10 border border-white/30 text-white placeholder-white/50 focus:border-white focus:ring-2 focus:ring-white/20 outline-none transition-all resize-none" placeholder="Tell us about the build — size, phase, anything helpful..."></textarea>
             </div>
-            <button type="submit" class="w-full bg-accent text-white px-6 py-4 font-semibold text-lg hover:bg-accent/90 transition-colors">
+            <div class="form-status" data-form-status role="status" aria-live="polite" hidden></div>
+            <button type="submit" class="w-full bg-accent text-white px-6 py-4 font-semibold text-lg hover:bg-accent/90 transition-colors disabled:opacity-60 disabled:cursor-not-allowed">
               Request a Quote — No Pressure
             </button>
           </form>

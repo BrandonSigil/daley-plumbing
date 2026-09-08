@@ -9,7 +9,7 @@ import Footer from '../../components/Footer.astro';
   description="Plumbing emergency in Tacoma? Burst pipe, major leak, sewer backup — Daley Plumbing responds fast. We pick up the phone. Call (224) 430-1420 now."
 >
   <Header />
-  <main>
+  <main id="main">
     <!-- Hero - Emergency specific with accent color -->
     <section class="pt-28 md:pt-36 pb-16 bg-accent text-white">
       <div class="container mx-auto px-4 text-center">
@@ -105,7 +105,7 @@ import Footer from '../../components/Footer.astro';
       <div class="container mx-auto px-4 text-center">
         <h2 class="font-display text-3xl md:text-4xl text-primary mb-8">Emergency Service Area</h2>
         <div class="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
-          {['Tacoma', 'Federal Way', 'Puyallup', 'Lakewood', 'Gig Harbor', 'Bonney Lake', 'Spanaway', 'University Place', 'Fife', 'Sumner', 'Auburn'].map(city => (
+          {['Tacoma', 'Federal Way', 'Puyallup', 'Lakewood', 'Gig Harbor', 'Bonney Lake', 'Spanaway', 'University Place', 'Fife', 'Sumner', 'Auburn', 'Milton', 'Edgewood'].map(city => (
             <span class="bg-secondary px-4 py-2 text-neutral-700 font-medium border border-neutral-200">{city}</span>
           ))}
         </div>

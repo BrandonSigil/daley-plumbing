@@ -1,0 +1,127 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import FinalCTA from '../../components/FinalCTA.astro';
+
+const areas = [
+  {
+    city: 'Tacoma',
+    href: '/areas/tacoma',
+    note: 'Home base. Older housing stock across the North End, Proctor, and Hilltop means repipes, drain work, and remodels.',
+  },
+  {
+    city: 'Federal Way',
+    href: '/areas/federal-way',
+    note: 'Residential neighborhoods and light commercial, from Steel Lake to the developments off Pacific Highway.',
+  },
+  {
+    city: 'Puyallup',
+    href: '/areas/puyallup',
+    note: 'South Hill new builds alongside the aging galvanized pipe and sewer lines downtown.',
+  },
+  {
+    city: 'Lakewood',
+    href: '/areas/lakewood',
+    note: '1960s–1980s housing hitting the age where polybutylene and water heaters need attention.',
+  },
+  {
+    city: 'Gig Harbor',
+    href: '/areas/gig-harbor',
+    note: 'Waterfront and hillside homes, custom new builds, and a steady run of tankless conversions.',
+  },
+  {
+    city: 'Bonney Lake',
+    href: '/areas/bonney-lake',
+    note: "One of Pierce County's fastest-growing areas — new construction plumbing is the bulk of our work here.",
+  },
+  {
+    city: 'Spanaway',
+    href: '/areas/spanaway',
+    note: 'Practical homes and straightforward work — water heaters, drains, and fixture updates.',
+  },
+  {
+    city: 'University Place',
+    href: '/areas/university-place',
+    note: "Minutes from base. Established 1970s–1990s homes, and some of our fastest response times.",
+  },
+  {
+    city: 'Fife',
+    href: '/areas/fife',
+    note: 'Established residential plus the commercial corridor near the Port of Tacoma.',
+  },
+  {
+    city: 'Sumner',
+    href: '/areas/sumner',
+    note: 'Active new-build market in the valley, plus remodels in the older parts of town.',
+  },
+  {
+    city: 'Auburn',
+    href: '/areas/auburn',
+    note: 'Downtown, the valley floor, and newer construction up on Lakeland Hills.',
+  },
+  {
+    city: 'Milton / Edgewood',
+    href: '/areas/milton-edgewood',
+    note: 'Centrally located in our service area. Edgewood is one of our active new construction markets.',
+  },
+];
+---
+
+<Layout
+  title="Service Areas | Daley Plumbing | Tacoma & the South Sound"
+  description="Daley Plumbing serves Tacoma, Federal Way, Puyallup, Lakewood, Gig Harbor, Bonney Lake and the rest of Pierce and South King County. Call (224) 430-1420."
+  breadcrumbs={[{ name: 'Service Areas', path: '/areas' }]}
+>
+  <Header />
+  <main id="main">
+    <section class="pt-28 md:pt-36 pb-16 bg-primary text-white">
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="font-display text-5xl md:text-7xl mb-4">Where We Work</h1>
+        <p class="text-xl text-white/80 max-w-2xl mx-auto mb-8">
+          Pierce County and South King County. Tacoma-built. South Sound proud.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="tel:2244301420" class="inline-flex items-center gap-3 bg-white text-primary px-8 py-4 font-semibold hover:bg-secondary transition-all">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+            </svg>
+            Call (224) 430-1420
+          </a>
+          <a href="/contact" class="inline-block border-2 border-white/80 text-white px-8 py-4 font-semibold hover:bg-white hover:text-primary transition-all">
+            Get a Free Estimate
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-secondary">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto mb-12">
+          <p class="text-xl text-neutral-800 leading-relaxed">
+            We're a South Sound company, so our service area is the drive we actually make every day — not a map with pins in cities we've never worked in. Pick your city below for what we see most often in that area and how fast we can get to you.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {areas.map((area, i) => (
+            <a
+              href={area.href}
+              class={`bg-white p-6 border-l-4 shadow-sm hover:shadow-md transition-shadow group ${i % 3 === 0 ? 'border-primary' : i % 3 === 1 ? 'border-green' : 'border-accent'}`}
+            >
+              <h2 class="font-display text-2xl text-primary mb-2 group-hover:text-accent transition-colors">{area.city}</h2>
+              <p class="text-neutral-600 text-sm leading-relaxed">{area.note}</p>
+            </a>
+          ))}
+        </div>
+
+        <p class="text-center text-neutral-600 mt-12 max-w-2xl mx-auto">
+          Just outside these cities? Call anyway — if we can get there, we will.
+        </p>
+      </div>
+    </section>
+
+    <FinalCTA />
+  </main>
+  <Footer />
+</Layout>

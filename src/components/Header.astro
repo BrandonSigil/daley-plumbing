@@ -9,19 +9,30 @@
         <img
           src="/images/Daley.svg"
           alt="Daley Plumbing"
+          width="457"
+          height="270"
           class="h-10 md:h-12 w-auto"
         />
       </a>
 
       <nav class="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
-        <div class="relative group">
-          <button class="text-neutral-700 hover:text-primary font-medium transition-colors flex items-center gap-1">
+        <div class="relative group services-menu">
+          <button
+            id="services-menu-button"
+            type="button"
+            aria-expanded="false"
+            aria-controls="services-menu-panel"
+            class="text-neutral-700 hover:text-primary font-medium transition-colors flex items-center gap-1"
+          >
             Services
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </button>
-          <div class="absolute top-full left-0 mt-2 w-64 bg-white border border-tan shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+          <div
+            id="services-menu-panel"
+            class="services-panel absolute top-full left-0 mt-2 w-64 bg-white border border-tan shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-200 z-50"
+          >
             <a href="/services/new-construction" class="block px-4 py-3 text-sm text-neutral-700 hover:bg-secondary hover:text-primary transition-colors border-b border-neutral-100">
               New Construction Plumbing
             </a>
@@ -45,7 +56,7 @@
         <a href="/about" class="text-neutral-700 hover:text-primary font-medium transition-colors">
           About
         </a>
-        <a href="/areas/tacoma" class="text-neutral-700 hover:text-primary font-medium transition-colors">
+        <a href="/areas" class="text-neutral-700 hover:text-primary font-medium transition-colors">
           Service Areas
         </a>
         <a href="/contact" class="text-neutral-700 hover:text-primary font-medium transition-colors">
@@ -79,8 +90,11 @@
 
         <button 
           id="mobile-menu-button"
+          type="button"
           class="md:hidden text-primary p-1"
           aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
         >
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -117,7 +131,7 @@
         <a href="/about" class="text-neutral-700 hover:text-primary font-medium transition-colors">
           About
         </a>
-        <a href="/areas/tacoma" class="text-neutral-700 hover:text-primary font-medium transition-colors">
+        <a href="/areas" class="text-neutral-700 hover:text-primary font-medium transition-colors">
           Service Areas
         </a>
         <a href="/contact" class="text-neutral-700 hover:text-primary font-medium transition-colors">
@@ -139,15 +153,67 @@
   const mobileMenu = document.getElementById('mobile-menu');
 
   if (mobileMenuButton && mobileMenu) {
+    const setMobileMenu = (open: boolean) => {
+      mobileMenu.classList.toggle('hidden', !open);
+      mobileMenuButton.setAttribute('aria-expanded', String(open));
+    };
+
+    setMobileMenu(false);
+
     mobileMenuButton.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
+      setMobileMenu(mobileMenu.classList.contains('hidden'));
     });
 
-    const mobileLinks = mobileMenu.querySelectorAll('a');
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-      });
+    mobileMenu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => setMobileMenu(false));
+    });
+  }
+
+  // The desktop Services submenu opens on hover for pointer users. Without a
+  // click/keyboard path the six service links are unreachable by keyboard,
+  // so drive the same panel from the button's expanded state too.
+  const servicesButton = document.getElementById('services-menu-button');
+  const servicesWrapper = servicesButton?.closest('.services-menu');
+
+  if (servicesButton && servicesWrapper) {
+    const setServicesMenu = (open: boolean) => {
+      servicesWrapper.classList.toggle('services-open', open);
+      servicesButton.setAttribute('aria-expanded', String(open));
+    };
+
+    servicesButton.addEventListener('click', () => {
+      setServicesMenu(servicesButton.getAttribute('aria-expanded') !== 'true');
+    });
+
+    servicesButton.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowDown') {
+        event.preventDefault();
+        setServicesMenu(true);
+        servicesWrapper.querySelector<HTMLAnchorElement>('.services-panel a')?.focus();
+      }
+    });
+
+    servicesWrapper.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        setServicesMenu(false);
+        servicesButton.focus();
+      }
+    });
+
+    // Collapse once focus leaves the button and its panel entirely.
+    servicesWrapper.addEventListener('focusout', (event) => {
+      if (!servicesWrapper.contains(event.relatedTarget as Node)) setServicesMenu(false);
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!servicesWrapper.contains(event.target as Node)) setServicesMenu(false);
     });
   }
 </script>
+
+<style>
+  .services-menu.services-open .services-panel {
+    opacity: 1;
+    visibility: visible;
+  }
+</style>

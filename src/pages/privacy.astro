@@ -1,0 +1,104 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const updated = 'September 2026';
+---
+
+<Layout
+  title="Privacy Policy | Daley Plumbing"
+  description="How Daley Plumbing handles the information you send through our estimate forms. Plain English, no surprises."
+  breadcrumbs={[{ name: 'Privacy Policy', path: '/privacy' }]}
+>
+  <Header />
+  <main id="main">
+    <section class="pt-28 md:pt-36 pb-16 bg-primary text-white">
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="font-display text-5xl md:text-6xl mb-4">Privacy Policy</h1>
+        <p class="text-white/80">Last updated {updated}</p>
+      </div>
+    </section>
+
+    <section class="py-20 bg-secondary">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto space-y-10">
+          <div>
+            <p class="text-xl text-neutral-800 leading-relaxed">
+              Short version: we collect what you send us so we can call you back about your plumbing. We don't sell it, and we don't send marketing you didn't ask for.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="font-display text-3xl text-primary mb-4">What We Collect</h2>
+            <p class="text-lg text-neutral-700 leading-relaxed mb-4">
+              When you fill out an estimate form on this site, we receive what you typed into it: your name, phone number, email address (if you provide one), your city, the service you need, and whatever details you share about the project.
+            </p>
+            <p class="text-lg text-neutral-700 leading-relaxed">
+              If you call or email instead, we have whatever you tell us on the phone or in your message. That's it — we don't ask for payment details through this website.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="font-display text-3xl text-primary mb-4">How We Use It</h2>
+            <p class="text-lg text-neutral-700 leading-relaxed">
+              We use your information to respond to your request, quote the work, schedule it, and follow up about that job. We don't sell or rent your information to anyone, and we don't add you to a marketing list because you asked for an estimate.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="font-display text-3xl text-primary mb-4">Who Else Sees It</h2>
+            <p class="text-lg text-neutral-700 leading-relaxed mb-4">
+              Form submissions are delivered to our email inbox through Web3Forms, a third-party form-delivery service. This site is hosted on Vercel, and our fonts are served by Google Fonts — both of which receive standard technical request information such as your IP address, as any web host does.
+            </p>
+            <p class="text-lg text-neutral-700 leading-relaxed">
+              If we're running website analytics, it's Google Analytics, which uses cookies to measure aggregate traffic — how many people visited which pages. We use that to understand how the site is doing, not to identify you.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="font-display text-3xl text-primary mb-4">How Long We Keep It</h2>
+            <p class="text-lg text-neutral-700 leading-relaxed">
+              We keep estimate requests and job records as long as we need them for the work, our business records, and any warranty on that work. If you'd like us to delete your information, just ask.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="font-display text-3xl text-primary mb-4">Your Choices</h2>
+            <p class="text-lg text-neutral-700 leading-relaxed">
+              You can ask us what information we have about you, ask us to correct it, or ask us to delete it. You can also tell us to stop contacting you and we will. Email or call us using the details below — no forms required.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="font-display text-3xl text-primary mb-4">Children</h2>
+            <p class="text-lg text-neutral-700 leading-relaxed">
+              This is a plumbing website. It isn't directed at children, and we don't knowingly collect information from anyone under 13.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="font-display text-3xl text-primary mb-4">Changes</h2>
+            <p class="text-lg text-neutral-700 leading-relaxed">
+              If we change how we handle your information, we'll update this page and the date at the top.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 border-l-4 border-primary">
+            <h2 class="font-display text-3xl text-primary mb-4">Questions?</h2>
+            <p class="text-lg text-neutral-700 leading-relaxed mb-4">
+              Ask us directly. A real person will answer.
+            </p>
+            <p class="mb-2">
+              <a href="tel:2244301420" class="text-primary font-semibold text-lg hover:text-accent transition-colors">(224) 430-1420</a>
+            </p>
+            <p>
+              <a href="mailto:nate@plumbingdaley.com" class="text-primary hover:text-accent transition-colors break-all">nate@plumbingdaley.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

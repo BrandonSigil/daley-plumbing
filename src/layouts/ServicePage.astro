@@ -7,6 +7,7 @@ interface Props {
   title: string;
   description: string;
   h1: string;
+  crumb?: string;
   intro: string;
   included: string[];
   steps?: { title: string; text: string }[];
@@ -19,6 +20,7 @@ const {
   title,
   description,
   h1,
+  crumb,
   intro,
   included,
   steps = [
@@ -30,11 +32,15 @@ const {
   cities = ['Tacoma', 'Federal Way', 'Puyallup', 'Lakewood', 'Gig Harbor', 'Bonney Lake', 'Spanaway', 'University Place', 'Fife', 'Sumner', 'Auburn', 'Milton', 'Edgewood'],
   faqs,
 } = Astro.props;
+
+const breadcrumbs = crumb
+  ? [{ name: crumb, path: Astro.url.pathname }]
+  : undefined;
 ---
 
-<Layout title={title} description={description}>
+<Layout title={title} description={description} faqs={faqs} breadcrumbs={breadcrumbs}>
   <Header />
-  <main>
+  <main id="main">
     <!-- Hero -->
     <section class="pt-28 md:pt-36 pb-16 bg-primary text-white">
       <div class="container mx-auto px-4 text-center">

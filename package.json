@@ -13,11 +13,11 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.7.4",
     "astro": "^5.16.11"
   },
   "devDependencies": {
     "@astrojs/tailwind": "^6.0.2",
-    "daisyui": "^5.5.14",
     "prettier": "^3.8.0",
     "prettier-plugin-astro": "^0.14.1",
     "sharp": "^0.34.5",
