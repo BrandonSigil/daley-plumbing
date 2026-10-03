@@ -12,7 +12,7 @@ interface Props {
 
 const {
   title = 'Plumber for the People | Daley Plumbing | Tacoma, WA',
-  description = 'Daley Plumbing — licensed, local plumbers serving Tacoma and the South Sound. New construction, remodels, repairs, and emergency plumbing. (224) 430-1420',
+  description = 'Daley Plumbing — licensed, local plumbers serving Tacoma and the South Sound. New construction, remodels, repairs, and emergency plumbing. (253) 427-9077',
   image = '/images/og-daley-plumbing.png',
   canonicalPath,
   faqs,
@@ -44,7 +44,7 @@ const business = {
   "@id": "https://www.plumbingdaley.com/#business",
   "name": "Daley Plumbing",
   "slogan": "Plumber for the People",
-  "telephone": "+1-224-430-1420",
+  "telephone": "+1-253-427-9077",
   "email": "nate@plumbingdaley.com",
   "url": "https://www.plumbingdaley.com",
   "logo": new URL('/images/og-daley-plumbing.png', Astro.site).href,
@@ -204,7 +204,7 @@ if (breadcrumbs?.length) {
 
           if (!ACCESS_KEY) {
             say(
-              'This form is not configured yet. Please call (224) 430-1420 or email nate@plumbingdaley.com.',
+              'This form is not configured yet. Please call (253) 427-9077 or email nate@plumbingdaley.com.',
               'error'
             );
             return;
@@ -233,7 +233,7 @@ if (breadcrumbs?.length) {
             say("Thanks — we got it. We'll get back to you within one business day.", 'ok');
           } catch {
             say(
-              "Something went wrong on our end and your message didn't send. Give us a call at (224) 430-1420 and we'll take it from there.",
+              "Something went wrong on our end and your message didn't send. Give us a call at (253) 427-9077 and we'll take it from there.",
               'error'
             );
           } finally {
